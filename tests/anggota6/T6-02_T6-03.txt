@@ -1,0 +1,17 @@
+### T6-02/T6-03 - 2026-11-09 14:47:02
+$ SERVICES_LIST="ssh cron" ./scripts/monitor.sh   (kondisi awal)
+exit=0
+
+$ sudo systemctl stop cron
+exit=1
+ssh : AKTIF (PID 1066)
+cron : TIDAK AKTIF
+2026-11-09 14:47:02 [INFO] monitoring selesai: semua layanan aktif
+2026-11-09 14:47:02 [INFO] ssh aktif (PID 1066)
+2026-11-09 14:47:02 [ERROR] cron tidak aktif
+2026-11-09 14:47:02 [ERROR] monitoring selesai: 1 layanan bermasalah
+
+$ sudo systemctl start cron   (pemulihan)
+exit=0
+ssh : AKTIF (PID 1066)
+cron : AKTIF (PID 9578)

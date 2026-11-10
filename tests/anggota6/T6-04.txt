@@ -1,0 +1,5 @@
+### T6-04 - 2026-11-09 14:48:38
+exit=0
+[Backup terakhir]
+TIDAK ADA DATA BACKUP
+2026-11-09 14:48:39 [WARN] log backup tidak tersedia
