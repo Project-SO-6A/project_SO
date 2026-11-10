@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script Administrasi SSH - Kelompok 6A (Anggota 4)
 
-echo "=== Mula Pengaturan Hardening SSH ==="
+echo "=== Mulai Pengaturan Hardening SSH ==="
 
 if [ ! -f /etc/ssh/sshd_config.bak ]; then
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
@@ -18,4 +18,3 @@ echo "MaxAuthTries 3" | sudo tee -a /etc/ssh/sshd_config > /dev/null
 sudo systemctl restart sshd
 echo "[+] Service SSHD berhasil di-restart."
 echo "=== Hardening SSH Selesai ==="
-
