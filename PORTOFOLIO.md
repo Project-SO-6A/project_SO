@@ -1,7 +1,7 @@
 # Portofolio Individu - Anggota 6
 
 ## Identitas
-- Nama / NIM: Adelia Khalimatul Tausyiah / [NIM]
+- Nama / NIM: Adelia Khalimatul Tausyiah / 2510512007
 - Kelompok: 6A
 - Proyek: Server Berkas Bersama dengan Backup dan Audit Akses (Pilihan 6A)
 - Tanggung jawab: Monitoring, log, laporan, dan Docker
@@ -9,7 +9,13 @@
 ## Asal proyek
 Proyek ini dikerjakan berkelompok, bukan karya pribadi seluruhnya.
 - Repository utama: https://github.com/Project-SO-6A/project_SO
-- Anggota: [nama dan NIM seluruh anggota]
+- Anggota:
+1. Chesya Ramadhani Putri Widodo - 2510512003
+2. Adelia Khalimatul Tausyiah - 2510512007
+3. Swastika Sisilia Saksono - 2510512009
+4. Ainnisya Rezka Putri - 2510512017
+5. Nazwa Aulya Asri Pratama - 2510512019
+6. Desvia Maharani Kurniawan - 2510512023
 
 ## Kontribusi pribadi
 - `scripts/monitor.sh`: memeriksa status layanan, menulis log operasional, dan membuat laporan layanan dan backup. Kode keluar: 0 semua aktif, 1 ada layanan mati, 2 direktori tidak dapat ditulis.
