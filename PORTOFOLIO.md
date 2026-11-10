@@ -23,8 +23,7 @@ Proyek ini dikerjakan berkelompok, bukan karya pribadi seluruhnya.
 - Aktivitas Docker: container `alpine:3.20` membaca laporan melalui mount read-only.
 
 ## Bukti kontribusi
-- Pull request: [tautan PR yang sudah di-merge]
-- Commit: [tautan commit, misalnya 023890e]
+- Commit: [[tautan commit, misalnya 023890e]](https://github.com/adeliakhl/project_SO/commit/36571a264d16921ddc92d33feabf84d0b9979cae)
 
 ## Skenario individu
 | ID | Skenario | Hasil |
