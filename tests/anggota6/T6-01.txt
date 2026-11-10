@@ -1,0 +1,21 @@
+### T6-01 - 2026-11-09 16:53:43
+exit=0
+=== LAPORAN LAYANAN DAN BACKUP ===
+Waktu : 2026-11-09 16:53:43
+Host  : ubuntu-26
+
+[Layanan]
+ssh : AKTIF (PID 1066)
+cron : AKTIF (PID 9578)
+
+[Backup terakhir]
+2026-11-09 10:00:00|SUKSES|backup_dummy.tar.gz|verifikasi OK
+
+[Sumber daya]
+Load average : 0.18 0.40 0.19
+Memori (MB)  : 1804 terpakai dari 3398
+
+2026-11-09 14:48:39 [INFO] monitoring selesai: semua layanan aktif
+2026-11-09 16:53:43 [INFO] ssh aktif (PID 1066)
+2026-11-09 16:53:43 [INFO] cron aktif (PID 9578)
+2026-11-09 16:53:43 [INFO] monitoring selesai: semua layanan aktif
