@@ -1,0 +1,10 @@
+### SEBELUM beban - 2026-11-11 11:33:30
+%Cpu(s):  0.0 us,  4.8 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+Memori terpakai: 1608 dari 3398 MB
+
+### SAAT beban (yes > /dev/null, 15 detik)
+%Cpu(s): 13.6 us, 40.9 sy,  0.0 ni, 45.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+Memori terpakai: 1608 dari 3398 MB
+
+### SESUDAH beban
+%Cpu(s):  0.0 us,  4.8 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
