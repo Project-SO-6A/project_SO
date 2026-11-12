@@ -1,19 +1,23 @@
-=== 1. UJI NEGATIF: Akun biasa mencoba menjalankan script admin ===
-Exit Status Uji Negatif: 126
-[LULUS] Sistem menolak akun biasa (Exit status bukan 0).
+==========================================
+ PENGUJIAN ADMINISTRASI SSH (ANGGOTA 4)
+ Waktu Uji: Thu Nov 12 02:01:14 PM UTC 2026
+==========================================
 
-=== 2. UJI POSITIF: Admin menjalankan konfigurasi & cek layanan SSH ===
-=== Administrasi SSH ===
-[OK] Layanan SSH aktif.
-=== Administrasi SSH Selesai ===
-Exit Status Uji Positif: 0
-[LULUS] Konfigurasi & layanan SSH berhasil (Exit status 0).
+[UJI 1 - POSITIF] Validasi sintaks config/sshd_config.example
+HASIL: PASS - Sintaks config/sshd_config.example valid.
 
-=== 3. VERIFIKASI LOG & STATUS LAYANAN ===
-active
-[2026-11-10 14:49:15] [OK] Layanan SSH aktif.
-[2026-11-12 07:15:44] [OK] Backup konfigurasi berhasil: /etc/ssh/sshd_config.bak.20261112_071544
-[2026-11-12 07:15:45] [OK] Konfigurasi SSH valid.
-[2026-11-12 07:15:46] [OK] Layanan SSH berhasil direstart.
-[2026-11-12 07:15:46] [OK] Layanan SSH aktif.
-[INFO] Kondisi uji telah dibersihkan.
+[UJI 2 - POSITIF] Pengecekan parameter hardening SSH
+HASIL: PASS - Parameter hardening utama (PermitRootLogin no, PasswordAuthentication no, PubkeyAuthentication yes) aktif.
+
+[UJI 3 - POSITIF] Cek izin eksekusi scripts/ssh_admin.sh
+HASIL: PASS - scripts/ssh_admin.sh memiliki izin eksekusi (+x).
+
+[UJI 4 - NEGATIF] Simulasi konfigurasi SSH tidak valid
+HASIL: PASS - Sistem berhasil menolak konfigurasi SSH yang tidak valid (exit code != 0).
+
+[UJI 5 - POSITIF] Cek status service SSH di sistem
+HASIL: PASS - Layanan SSH aktif berjalan di sistem.
+
+==========================================
+ SEMUA SKENARIO UJI SELESAI DIJALANKAN
+==========================================

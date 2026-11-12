@@ -1,8 +1,36 @@
-# Contoh Konfigurasi SSH Server - Kelompok 6A (Anggota 4)
+# Konfigurasi Hardening SSH Server - Proyek Sistem Operasi Kelompok 6A
+# Anggota 4: Administrasi SSH
+
+# Port default layanan SSH (dapat disesuaikan)
 Port 22
+
+# Protokol SSH versi 2 saja (lebih aman)
+Protocol 2
+
+# Nonaktifkan login langsung sebagai root
 PermitRootLogin no
+
+# Batasi percobaan autentikasi maksimal 3 kali
 MaxAuthTries 3
-PasswordAuthentication yes
+
+# Batas waktu login (detik)
+LoginGraceTime 30
+
+# Aktifkan autentikasi berbasis SSH Public Key
 PubkeyAuthentication yes
-ClientAliveInterval 300
-ClientAliveCountMax 2
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Matikan autentikasi password jika sudah menggunakan key (ubah ke yes saat uji password)
+PasswordAuthentication no
+PermitEmptyPasswords no
+
+# Nonaktifkan fitur yang tidak diperlukan untuk keamanan
+X11Forwarding no
+AllowTcpForwarding no
+
+# Logging aktivitas autentikasi SSH
+SyslogFacility AUTH
+LogLevel VERBOSE
+
+# Daftar user/grup yang diizinkan login SSH (sesuaikan dengan user VM)
+# AllowUsers admin_so
