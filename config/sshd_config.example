@@ -1,0 +1,8 @@
+# Contoh Konfigurasi SSH Server - Kelompok 6A (Anggota 4)
+Port 22
+PermitRootLogin no
+MaxAuthTries 3
+PasswordAuthentication yes
+PubkeyAuthentication yes
+ClientAliveInterval 300
+ClientAliveCountMax 2

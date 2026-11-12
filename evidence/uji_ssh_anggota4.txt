@@ -1,0 +1,19 @@
+=== 1. UJI NEGATIF: Akun biasa mencoba menjalankan script admin ===
+Exit Status Uji Negatif: 126
+[LULUS] Sistem menolak akun biasa (Exit status bukan 0).
+
+=== 2. UJI POSITIF: Admin menjalankan konfigurasi & cek layanan SSH ===
+=== Administrasi SSH ===
+[OK] Layanan SSH aktif.
+=== Administrasi SSH Selesai ===
+Exit Status Uji Positif: 0
+[LULUS] Konfigurasi & layanan SSH berhasil (Exit status 0).
+
+=== 3. VERIFIKASI LOG & STATUS LAYANAN ===
+active
+[2026-11-10 14:49:15] [OK] Layanan SSH aktif.
+[2026-11-12 07:15:44] [OK] Backup konfigurasi berhasil: /etc/ssh/sshd_config.bak.20261112_071544
+[2026-11-12 07:15:45] [OK] Konfigurasi SSH valid.
+[2026-11-12 07:15:46] [OK] Layanan SSH berhasil direstart.
+[2026-11-12 07:15:46] [OK] Layanan SSH aktif.
+[INFO] Kondisi uji telah dibersihkan.
