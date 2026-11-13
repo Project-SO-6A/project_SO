@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script Pengujian Hak Akses Read-Only - Anggota 3 (AinnisyaRezka)
 
-SHARE_DIR="/srv/samba/shared"
+SHARE_DIR="/srv/share"
 
 echo "=== MEMULAI PENGUJIAN ANGGOTA 3 (READ-ONLY) ==="
 
