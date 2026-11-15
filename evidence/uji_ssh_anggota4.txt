@@ -1,23 +1,23 @@
 ==========================================
  PENGUJIAN ADMINISTRASI SSH (ANGGOTA 4)
- Waktu Uji: Thu Nov 12 02:01:14 PM UTC 2026
+ Waktu Uji: Sun Nov 15 07:14:41 AM UTC 2026
 ==========================================
 
-[UJI 1 - POSITIF] Validasi sintaks config/sshd_config.example
-HASIL: PASS - Sintaks config/sshd_config.example valid.
+[T4-01a - POSITIF] Validasi sintaks config/sshd_config.example
+HASIL: PASS - Sintaks config/sshd_config.example valid (exit 0).
 
-[UJI 2 - POSITIF] Pengecekan parameter hardening SSH
-HASIL: PASS - Parameter hardening utama (PermitRootLogin no, PasswordAuthentication no, PubkeyAuthentication yes) aktif.
+[T4-01b - POSITIF] Pengecekan parameter hardening SSH
+HASIL: PASS - Parameter hardening utama aktif (exit 0).
 
-[UJI 3 - POSITIF] Cek izin eksekusi scripts/ssh_admin.sh
-HASIL: PASS - scripts/ssh_admin.sh memiliki izin eksekusi (+x).
+[T4-01c - POSITIF] Cek izin eksekusi scripts/ssh_admin.sh & status service SSH
+HASIL: PASS - Skrip executable dan layanan SSH aktif berjalan (exit 0).
 
-[UJI 4 - NEGATIF] Simulasi konfigurasi SSH tidak valid
-HASIL: PASS - Sistem berhasil menolak konfigurasi SSH yang tidak valid (exit code != 0).
+[T4-02a - NEGATIF] Akun biasa (nobody) mencoba membaca/mengubah konfigurasi SSH
+HASIL: PASS - Akses akun biasa ke /etc/ssh/ ditolak sistem (Permission denied, exit 1).
 
-[UJI 5 - POSITIF] Cek status service SSH di sistem
-HASIL: PASS - Layanan SSH aktif berjalan di sistem.
+[T4-02b - NEGATIF] Validasi konfigurasi SSH tidak valid ditolak sshd -t
+HASIL: PASS - Konfigurasi tidak valid berhasil ditolak oleh sshd -t (exit 1).
 
 ==========================================
- SEMUA SKENARIO UJI SELESAI DIJALANKAN
+ SEMUA SKENARIO UJI (T4-01 & T4-02) PASS
 ==========================================
