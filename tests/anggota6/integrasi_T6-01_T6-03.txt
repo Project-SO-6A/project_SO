@@ -1,0 +1,50 @@
+### T6-01 semua layanan aktif - 2026-11-16 06:02:41
+
+$ SERVICES_LIST="smbd ssh" ./scripts/monitor.sh
+exit=0
+
+$ cat output/laporan.txt
+=== LAPORAN LAYANAN DAN BACKUP ===
+Waktu : 2026-11-16 06:02:41
+Host  : ubuntu-26
+
+[Layanan]
+smbd : AKTIF (PID 5007)
+ssh : AKTIF (PID 1158)
+
+[Backup terakhir]
+2026-11-16 05:47:22|SUKSES|share_20261116_054722.tar.gz|Backup dan verifikasi arsip berhasil
+
+[Sumber daya]
+Load average : 0.02 0.07 0.12
+Memori (MB)  : 1301 terpakai dari 3398
+HASIL T6-01: LULUS
+
+### T6-02 layanan smbd dihentikan
+
+$ sudo systemctl stop smbd
+
+$ SERVICES_LIST="smbd ssh" ./scripts/monitor.sh
+exit=1
+
+$ grep -E "smbd|ssh" output/laporan.txt
+smbd : TIDAK AKTIF
+ssh : AKTIF (PID 1158)
+
+$ tail -n 3 logs/operasional.log
+2026-11-16 06:02:41 [ERROR] smbd tidak aktif
+2026-11-16 06:02:42 [INFO] ssh aktif (PID 1158)
+2026-11-16 06:02:42 [ERROR] monitoring selesai: 1 layanan bermasalah
+HASIL T6-02: LULUS
+
+### T6-03 layanan smbd dipulihkan
+
+$ sudo systemctl start smbd
+
+$ SERVICES_LIST="smbd ssh" ./scripts/monitor.sh
+exit=0
+
+$ grep -E "smbd|ssh" output/laporan.txt
+smbd : AKTIF (PID 5678)
+ssh : AKTIF (PID 1158)
+HASIL T6-03: LULUS
