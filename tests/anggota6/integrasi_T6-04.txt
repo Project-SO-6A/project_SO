@@ -1,0 +1,12 @@
+### T6-04 log backup tidak tersedia - 2026-11-16 06:02:42
+
+$ BACKUP_LOG=/tmp/tidak_ada.log SERVICES_LIST="smbd ssh" ./scripts/monitor.sh
+exit=0
+
+$ grep -A1 "Backup terakhir" output/laporan.txt
+[Backup terakhir]
+TIDAK ADA DATA BACKUP
+
+$ grep WARN logs/operasional.log | tail -n 1
+2026-11-16 06:02:42 [WARN] log backup tidak tersedia
+HASIL T6-04: LULUS

@@ -7,7 +7,7 @@ LOG_FILE="$BASE_DIR/logs/operasional.log"
 OUT_DIR="$BASE_DIR/output"
 REPORT="$OUT_DIR/laporan.txt"
 BACKUP_LOG="${BACKUP_LOG:-$BASE_DIR/logs/backup.log}"
-read -ra SERVICES <<< "${SERVICES_LIST:-ssh}"   # nanti ganti default jadi: smbd ssh
+read -ra SERVICES <<< "${SERVICES_LIST:-smbd ssh}"
 
 log() { echo "$(date '+%F %T') [$1] $2" >> "$LOG_FILE"; }
 
