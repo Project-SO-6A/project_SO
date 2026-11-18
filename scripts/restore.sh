@@ -1,4 +1,4 @@
-#!/usr/bin/enc bash
+#!/usr/bin/env bash
 set -Eeuo pipefail
 
 BACKUP_DIR="/srv/backup"
