@@ -42,7 +42,7 @@ Seluruh pengujian memakai data dummy pada VM Linux. Laporan lengkap ada pada dok
 | `scripts/backup.sh`, `scripts/restore.sh` | Backup dengan checksum dan pemulihan |
 | `scripts/monitor.sh` | Monitoring layanan, log operasional, dan laporan |
 | `config/sshd_config.example` | Contoh konfigurasi SSH |
-| `config/smb.conf` {{konfirmasi lokasi, Anggota 2}} | Contoh konfigurasi Samba tanpa password. Berkas aktif ada di `/etc/samba/smb.conf` |
+| `config/smb.conf` | Contoh konfigurasi Samba tanpa password. Berkas aktif ada di `/etc/samba/smb.conf` |
 | `tests/anggota2/test_samba.sh` | Uji akses Samba |
 | `tests/anggota3/test_anggota3.sh`, `hasil_uji.txt` | Uji hak pembaca dan buktinya |
 | `tests/anggota4/test_ssh.sh` | Uji administrasi SSH |
