@@ -26,8 +26,8 @@ Seluruh pengujian memakai data dummy pada VM Linux. Laporan lengkap ada pada dok
 | Komponen | Versi |
 | --- | --- |
 | Sistem operasi | Ubuntu 26.04 LTS (Resolute Raccoon), VirtualBox |
-| Kernel | {{samakan dengan tabel 2.1 laporan}} |
-| Spesifikasi VM | {{samakan dengan tabel 2.1 laporan}}. Pengukuran CPU dan memori Anggota 6 pada VM 2 vCPU, RAM 3398 MB |
+| Kernel | 7.0.0-15-generic  |
+| Spesifikasi VM | Pengukuran CPU dan memori Anggota 4 pada VM 1 vCPU, RAM 5872 MB total (swap 2414 MB)  |
 | OpenSSH | 10.2p1 |
 | Samba | 4.23.6 |
 | Docker | 29.1.3 |
@@ -69,7 +69,6 @@ sudo groupadd -f reader
 
 Catatan:
 - `logs/` dan `output/` dibuat **sebagai user biasa sebelum** `backup.sh`. Skrip itu memakai `sudo`, sehingga kalau foldernya dibuat belakangan, dimiliki root dan `monitor.sh` berhenti dengan kode keluar 2.
-- Dua baris `groupadd` diperlukan karena `setup_user_perm.sh` memakai nama variabel `GROUPS`, variabel bawaan bash yang berisi nomor group pengguna, sehingga kedua group tidak terbentuk sendiri. {{hapus catatan ini hanya jika perbaikan sudah terverifikasi}}
 - Skrip yang ditulis di Windows berakhiran CRLF. Jika muncul `command not found`, jalankan `sed -i 's/\r$//' NAMA_SKRIP`.
 
 ## Menjalankan
