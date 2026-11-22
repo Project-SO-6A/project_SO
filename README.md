@@ -79,7 +79,7 @@ Catatan:
 | 2. Samba (Anggota 2) | Terapkan blok `[DataShared]` pada `/etc/samba/smb.conf`, daftarkan user dengan `smbpasswd`, lalu `sudo systemctl restart smbd` |
 | 3. SSH (Anggota 4) | `sudo sshd -t -f config/sshd_config.example`, lalu `sudo ./scripts/ssh_admin.sh` |
 | 4. Backup (Anggota 5) | `sudo bash scripts/backup.sh` |
-| 5. Restore (Anggota 5) | `sudo bash scripts/restore.sh` {{tambahkan argumen jika ada}} |
+| 5. Restore (Anggota 5) | `sudo bash scripts/restore.sh`|
 | 6. Monitoring (Anggota 6) | `SERVICES_LIST="smbd ssh" ./scripts/monitor.sh` |
 
 Ringkasan:
